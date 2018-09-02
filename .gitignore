@@ -33,3 +33,6 @@
 .ruby-version
 Gemfile.lock
 package-lock.json
+
+# Ignore Spring files.
+/spring/*.pid
