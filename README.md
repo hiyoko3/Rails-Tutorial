@@ -1,41 +1,57 @@
-# Ruby on Rails チュートリアルのサンプルアプリケーション
+# Rails tutorial
 
-これは、次の教材で作られたサンプルアプリケーションです。   
-[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-[Michael Hartl](http://www.michaelhartl.com/) 著
+[![License: MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://opensource.org/licenses/MIT)
 
-## ライセンス
+This is a sample application that is provided by [*Ruby on Rails Tutorial*](https://railstutorial.jp/)
 
-[Ruby on Rails チュートリアル](https://railstutorial.jp/)内にある
-ソースコードはMITライセンスとBeerwareライセンスのもとで公開されています。
-詳細は [LICENSE.md](LICENSE.md) をご覧ください。
+Author: [Michael Hartl](http://www.michaelhartl.com/)
 
-## 使い方
+## Licenses
 
-このアプリケーションを動かす場合は、まずはリポジトリを手元にクローンしてください。
-その後、次のコマンドで必要になる RubyGems をインストールします。
+[MIT](https://opensource.org/licenses/MIT)
+
+[Beerware](https://spdx.org/licenses/Beerware.html)
+
+
+## Usage
+
+
+Downloading a project
+
+```
+$ git clone *** # Choose a repository
+```
+
+or
+
+Downloading `Zip file` and extracting it.
+
+Next, we need to install `RubyGems`.
 
 ```
 $ bundle install --without production
 ```
 
-その後、データベースへのマイグレーションを実行します。
+Database migration.
 
 ```
 $ rails db:migrate
 ```
 
-最後に、テストを実行してうまく動いているかどうか確認してください。
+A test to see this app works!
 
 ```
 $ rails test
 ```
 
-テストが無事に通ったら、Railsサーバーを立ち上げる準備が整っているはずです。
+If you are ok?
+
+Let's start an app!
 
 ```
 $ rails server
 ```
 
-詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
-を参考にしてください。
+## Reference
+ 
+[*Ruby on Rails Tutorial*](https://railstutorial.jp/)
