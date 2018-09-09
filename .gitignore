@@ -38,3 +38,6 @@ package-lock.json
 
 *.idea/
 *.DS_Store
+
+# アップロードされたテスト画像を無視する
+/public/uploads
