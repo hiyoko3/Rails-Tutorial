@@ -9,7 +9,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get root_path
     assert_select 'div.pagination'
-    assert_select 'input[type=FILL_IN]'
+    assert_select 'input[type=file]'
     # 無効な送信
     post microposts_path, params: { micropost: { content: "" } }
     assert_select 'div#error_explanation'
@@ -19,9 +19,10 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_difference 'Micropost.count', 1 do
       post microposts_path, params: { micropost:
                                           { content: content,
-                                            picture: FILL_IN } }
+                                            picture: picture } }
     end
-    assert FILL_IN.picture?
+    micropost = assigns(:micropost)
+    assert micropost.picture?
     follow_redirect!
     assert_match content, response.body
     # 投稿を削除する
